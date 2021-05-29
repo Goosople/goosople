@@ -18,7 +18,8 @@
         }
 
         .time_container,
-        .date_container {
+        .date_container,
+        .poem_con {
           width: 100%;
           margin: auto;
           text-align: center;
@@ -38,7 +39,8 @@
           font-size: 12rem;
         }
 
-        .date {
+        .date,
+        .poem_con {
           padding-top: 40px;
           font-size: 4.5rem;
         }
@@ -46,6 +48,7 @@
 </head>
 
 <body>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <div class="page">
       <div class="time_container">
           <div class="time" id="time">12:00</div>
@@ -55,6 +58,18 @@
           <div class="date" id="date">1月1日</div>
           <div class="date" id="week">星期一</div>
       </div>
+<div class="poem_con">
+<div id="poem_sentence"></div>
+<div id="poem_info"></div>
+<script type="text/javascript">
+  jinrishici.load(function(result) {
+    var sentence = document.querySelector("#poem_sentence")
+    var info = document.querySelector("#poem_info")
+    sentence.innerHTML = result.data.content
+    info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+  });
+</script>
+</div>
     </div>
 
 
@@ -77,16 +92,5 @@
       update()
       setInterval("update()", 60 * 1000)
     </script>
-<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-<div id="poem_sentence"></div>
-<div id="poem_info"></div>
-<script type="text/javascript">
-  jinrishici.load(function(result) {
-    var sentence = document.querySelector("#poem_sentence")
-    var info = document.querySelector("#poem_info")
-    sentence.innerHTML = result.data.content
-    info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
-  });
-</script>
 </body>
 </html>
