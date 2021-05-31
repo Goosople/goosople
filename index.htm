@@ -66,8 +66,8 @@
 <div id="poem_info" class="poem_con"></div>
 <script type="text/javascript">
   jinrishici.load(function(result) {
-    var sentence = document.querySelector("#poem_sentence")
-    var info = document.querySelector("#poem_info")
+    var sentence = document.getElementById("poem_sentence")
+    var info = document.getElementById("poem_info")
     sentence.innerHTML = result.data.content
     info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
   });
