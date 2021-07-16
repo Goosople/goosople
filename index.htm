@@ -33,12 +33,12 @@
     .date_container {}
 
     .time {
-      padding-top: 100px;
+      padding-top: 80px;
       font-size: 12rem;
     }
 
     .date {
-      padding-top: 10px;
+      padding-top: 5px;
       font-size: 4.5rem;
     }
 
@@ -63,6 +63,7 @@
       <a href="https://www.gushiwen.cn">古诗文网</a>
       <div id="poem_sentence" class="poem_con"></div>
       <div id="poem_info" class="poem_con"></div>
+      <div id="he-plugin-standard"></div>
       <script type="text/javascript">
         jinrishici.load(function (result) {
           var sentence = document.getElementById("poem_sentence")
@@ -99,20 +100,19 @@
       e.preventDefault();
     })
   </script>
-  <div id="he-plugin-standard"></div>
-<script>
-WIDGET = {
-  "CONFIG": {
-    "layout": "1",
-    "width": "400",
-    "height": "150",
-    "background": "5",
-    "dataColor": "000000",
-    "key": "9b7c6274465345279172f241ebb55e9a"
+  <script>
+  WIDGET = {
+    "CONFIG": {
+      "layout": "1",
+      "width": "400",
+      "height": "150",
+      "background": "5",
+      "dataColor": "000000",
+      "key": "9b7c6274465345279172f241ebb55e9a"
+    }
   }
-}
-</script>
-<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+  </script>
+  <script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
 </body>
 
 </html>
