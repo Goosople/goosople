@@ -1,5 +1,9 @@
+A learning developer, interested in Android & Kotlin.
+
 ![Goosople's GitHub stats](https://github-readme-stats.vercel.app/api?username=goosople&show_icons=true)
+
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Goosople)](https://github.com/anuraghazra/github-readme-stats)
+
 <!--
 ### Hi there 👋
 
